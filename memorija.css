@@ -1,0 +1,77 @@
+body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        
+        #top {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        
+        div#memory_board {
+            background-color: cornsilk;
+            border: #999 1px solid;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+            padding: 24px;
+            height: 500px;
+            width: 500px;
+            margin: 20px auto;
+        }
+        
+        div#memory_board>div {
+            background-color: crimson;
+            border: #000 1px solid;
+            border-radius: 15px;
+            margin: 10px;
+            cursor: pointer;
+            text-align: center;
+        }
+        
+        #clear {
+            clear: both;
+        }
+        
+        @media (max-width: 700px) {
+            body {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+            }
+            #memory_board div:hover {}
+            div#memory_board {
+                background-color: cornsilk;
+                border: #999 1px solid;
+                box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+                padding: 24px;
+                height: 300px;
+                width: 300px;
+                margin: 20% auto;
+            }
+            div#memory_board>div {
+                background-color: crimson;
+                border: #000 1px solid;
+                border-radius: 15px;
+                margin: 5px;
+                cursor: pointer;
+                text-align: center;
+                -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+            }
+        }
+        
+        button {
+            border-radius: 15px;
+            outline: none;
+            color: white;
+            font-weight: 700;
+            font-family: sans-serif;
+            border: 0;
+            height: 30px;
+            width: 90px;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+            background-color: crimson;
+        }
