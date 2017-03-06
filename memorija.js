@@ -60,44 +60,36 @@ function newboard() {
 
     for (var i = 0; i < memmory_array_shufled.length; i++) {
         var d = document.createElement("div");
+        d.setAttribute("class","tile");
+        var divcontainer = document.createElement("div");
         var value = memmory_array_shufled[i];
         if (getradiovalue() === 6) {
-            if (isMaxwidth700px()) {
-                d.style.height = "30px";
-                d.style.width = "30px";
-                d.style.padding = "4px";
-                d.style.fontSize = "22px";
-            } else {
-                d.style.height = "30px";
-                d.style.width = "30px";
-                d.style.padding = "15px";
-                d.style.fontSize = "30px";
-            }
-
+              divcontainer.setAttribute("class","col-2 divcontainer");
+               divcontainer.style.height = "16%";
+                
+                
+               // d.style.fontSize = "200%";
 
         } else if (getradiovalue() === 4) {
-            if (isMaxwidth700px()) {
-                d.style.height = "30px";
-                d.style.width = "30px";
-                d.style.padding = "16px";
-                d.style.fontSize = "22px";
-            } else {
-                d.style.height = "60px";
-                d.style.width = "60px";
-                d.style.padding = "20px";
-                d.style.fontSize = "50px";
-            }
+          
+                divcontainer.setAttribute("class","col-3 divcontainer");
+            
+                
+                
+               // d.style.fontSize = "250%";
+            
 
         }
-        d.style.float = "left";
+        divcontainer.style.float = "left";
         d.id = "card" + i;
         console.log(value);
         d.value = memmory_array_shufled[i];
         d.addEventListener("click", function () {
             check(this);
         }, false);
-        document.getElementById('memory_board').appendChild(d);
-        $(d).hide().slideDown("slow");
+        divcontainer.appendChild(d);
+        document.getElementById('memory_board').appendChild(divcontainer);
+        $(divcontainer).hide().slideDown("slow");
 
         if ((i + 1) % getradiovalue() === 0) {
             var b = document.createElement("br");
