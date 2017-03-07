@@ -39,7 +39,7 @@
     .tile {
         display: flex;
         justify-content: center;
-        /* align horizontal */
+        
         align-items: center;
         font-size: 200%;
         background-color: crimson;
@@ -56,62 +56,93 @@
         clear: both;
     }
     
-    @media (max-width: 540px) {
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-        }
+    @media (min-width:320px) {
+        /* smartphones, portrait iPhone, portrait 480x320 phones (Android) */
         #boardcontainer {
             height: 100vh;
             width: 100vw;
         }
         div#memory_board {
-            background-color: cornsilk;
-            border: #999 1px solid;
-            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-            padding: 24px;
-            height: 60%;
+            height: 50%;
             width: 100%;
-        }
-        .divcontainer {
-            display: flex;
-            align-content: center;
-            justify-content: center;
-            height: 25%;
-            width: 50%;
-            padding: 2%;
         }
         .tile {
-            display: flex;
-            justify-content: center;
-            /* align horizontal */
-            align-items: center;
-            font-size: 150%;
-            background-color: crimson;
-            border: #000 1px solid;
-            border-radius: 15px;
-            height: 100%;
-            width: 100%;
-            text-align: center;
-            cursor: pointer;
-            text-align: center;
             -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
         }
     }
     
-    @media (max-width: 720px) {
+    @media (min-width:480px) {
+        /* smartphones, Android phones, landscape iPhone 5 */
         #boardcontainer {
-            height: 90vh;
-            width: 80vw;
+            height: 100vh;
+            width: 100vw;
+        }
+        div#memory_board {
+            height: 60%;
+            width: 90%;
+        }
+        .tile {
+            -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
         }
     }
     
-    @media (max-width: 960px) {
+    @media (min-width:600px) {
+        /* portrait tablets, portrait iPad, e-readers (Nook/Kindle) */
         #boardcontainer {
-            height: 90vh;
-            width: 100vw;
+            height: 100vh;
+            width: 80vw;
+        }
+        div#memory_board {
+            height: 60%;
+            width: 100%;
+        }
+    }
+    
+    @media only screen (min-width:600px) and (orientation: landscape) {
+        /*  landscape phones */
+        #boardcontainer {
+            height: 100vh;
+            width: 50vw;
+        }
+        div#memory_board {
+            height: 60%;
+            width: 100%;
+        }
+    }
+    
+    @media (min-width:801px) {
+        /* tablet, landscape iPad, lo-res laptops ands desktops */
+        #boardcontainer {
+            height: 100vh;
+            width: 70vw;
+        }
+        div#memory_board {
+            height: 80%;
+            width: 70%;
+        }
+    }
+    
+    @media only screen (min-device-width: 1024px) and (max-device-width: 1366px) and (orientation: portrait) {
+        /* iPad pro portrait*/
+        #boardcontainer {
+            height: 100vh;
+            width: 85vw;
+        }
+        div#memory_board {
+            height: 60%;
+            width: 90%;
+        }
+    }
+    
+    @media (min-width:1025px) {
+        /* big landscape tablets, laptops, and desktops */
+    }
+    
+    @media (min-width:1281px) {
+        /* hi-res laptops and desktops */
+        .tile{
+            font-size: 300%;
+            border-radius: 20px;
         }
     }
     
@@ -122,8 +153,8 @@
         font-weight: 700;
         font-family: sans-serif;
         border: 0;
-        height: 30px;
-        width: 90px;
+        height: 30%;
+        width: 50%;
         box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
         background-color: crimson;
     }
